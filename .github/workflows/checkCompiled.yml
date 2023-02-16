@@ -5,8 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: testing check compiled
     steps:
+      - name: git checkout
+        uses: actions/checkout@v3
       - name: check compiled - but for laughs
-        id: check
         uses: sonarsource/gh-action-lt-backlog/CheckCompiledCommited@feature/check-compiled-commited
         with:
           build-command: 'echo hi'
