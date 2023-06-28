@@ -1,8 +1,8 @@
 name: Assign card to sender
 
 on:
-  project_card:
-    types: ["moved"]
+  # https://docs.github.com/en/webhooks-and-events/webhooks/webhook-events-and-payloads?actionType=edited#projects_v2_item
+  projects_v2_item:
 
 jobs:
   AssignCardToSender_job:
