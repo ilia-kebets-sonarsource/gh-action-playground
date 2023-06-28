@@ -16,7 +16,7 @@ jobs:
       - uses: sonarsource/gh-action-lt-backlog/MoveCardToReview-v2@ilia/move-card-to-review-v2
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
-          column-id: 123456     # Kanban "Review in progress" column
+          column-id: bfc1c7f6     # Kanban "Review in progress" column
 
   LogPayload_job:
     name: Log payload
