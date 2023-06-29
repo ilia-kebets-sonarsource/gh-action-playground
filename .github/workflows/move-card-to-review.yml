@@ -1,4 +1,4 @@
-name: Request review
+name: Request review v2
 
 on:
   pull_request:
