@@ -1,0 +1,16 @@
+name: Assign card to sender V2
+
+on:
+  project_card:
+    types: ["moved"]
+
+jobs:
+  AssignCardToSender_job:
+    runs-on: ubuntu-latest
+    if: |
+        github.event.changes.column_id.from == "d14a0a92"       # FIXME: Replace with "To do" column ID
+        && github.event.project_card.content_url != null
+    steps:
+      - uses: sonarsource/gh-action-lt-backlog/AssignCardToSender-v2@ilia/assign-card-to-sender-v2
+        with:
+          github-token: ${{secrets.SPRINT_TOKEN}}
