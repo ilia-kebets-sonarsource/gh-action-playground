@@ -14,3 +14,8 @@ jobs:
       - uses: sonarsource/gh-action-lt-backlog/AssignCardToSender-v2@ilia/assign-card-to-sender-v2
         with:
           github-token: ${{secrets.SPRINT_TOKEN}}
+  LogPayload_job:
+    name: Log payload
+    runs-on: ubuntu-latest
+    steps:
+      - uses: sonarsource/gh-action-lt-backlog/LogPayload@v1
