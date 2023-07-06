@@ -1,4 +1,4 @@
-name: Request review v2 - wala
+name: Request review v2
 
 on:
   pull_request:
