@@ -1,37 +1,3 @@
-
-# MoveCardAfterReview - V2
-
-Assign a fixed issue or a PR card to the PR author and move the card to the `In Progress` or `Review approved` column.
-
-If the relevant card does not exist, a new one is created in the selected GitHub project column.
-
-When PR contains one or more `Fixes #...` in the description, all referenced issues are moved. Otherwise, the card for the standalone PR itself is moved.
-
-## Inputs
-
-### `github-token`
-
-Token to access GitHub API.
-
-### `column-id`
-
-ID of the Kanban column where the card should be moved to. Typically ID of `In progress` or `Review approved` column.
-
-### `project-number`
-
-Number of the project where the column is. [This page](docs/github.md) explains how this can be obtained.
-
-### `is-org`
-
-Optional parameter, set to `false` in case you wish to use this action in a repository that belongs to a user.
-
-## Outputs
-
-None
-
-## Example usage
-
-```yaml
 name: Submit Review
 
 on:
@@ -66,4 +32,4 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           column-id: "e228f817"     # Kanban "Review approved" column
-```
+
