@@ -18,6 +18,7 @@ jobs:
           github-token: ${{secrets.SPRINT_TOKEN}}
           column-id: "bfc1c7f6"     # Kanban "Review in progress" column
           project-number: 1
+          is-org: false
 
   LogPayload_job:
     name: Log payload
