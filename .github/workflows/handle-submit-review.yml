@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: sonarsource/gh-action-lt-backlog/MoveCardAfterReview-v2@ilia/move-card-after-review-v2
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{secrets.SPRINT_TOKEN}}
           column-id: "d14a0a92"     # Kanban "In progress" column
           project-number: 1
           is-org: false
@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: sonarsource/gh-action-lt-backlog/MoveCardAfterReview-v2@ilia/move-card-after-review-v2
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{secrets.SPRINT_TOKEN}}
           column-id: "e228f817"     # Kanban "Review approved" column
           project-number: 1
           is-org: false
