@@ -19,6 +19,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           column-id: "d14a0a92"     # Kanban "In progress" column
+          project-number: 1
 
   ReviewApproved_job:
     name: Move card to review approved
@@ -32,4 +33,5 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           column-id: "e228f817"     # Kanban "Review approved" column
+          project-number: 1
 
